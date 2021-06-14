@@ -1,0 +1,124 @@
+
+
+
+/* 
+
+    <div class="box" id="box">
+      <div class="shimmer">
+        <div class="wrapper">
+          <div class="image-card animate"></div>
+          <div class="stroke animate title"></div>
+          <div class="stroke animate link"></div>
+          <div class="stroke animate description"></div>
+        </div>
+      </div>
+      <div class="shimmer">
+        <div class="wrapper">
+          <div class="image-card animate1"></div>
+          <div class="stroke animate1 title"></div>
+          <div class="stroke animate link"></div>
+          <div class="stroke animate3 description"></div>
+          <div class="stroke animate2 description"></div>
+        </div>
+      </div>
+      <div class="shimmer">
+        <div class="wrapper">
+          <div class="image-card animate3"></div>
+          <div class="stroke animate3 title"></div>
+          <div class="stroke animate3 link"></div>
+          <div class="stroke animate3 description"></div>
+        </div>
+      </div>
+    </div>
+
+*/
+
+
+
+
+
+
+@mixin animate ($one, $two, $three) {
+     animation: shimmer 3s;
+     animation-iteration-count: infinite;
+     background: linear-gradient(to right, #e6e6e6 5%, #cccccc 25%, #e6e6e6 35%);
+     background: linear-gradient(to right, $one 5%, $two 25%, $three 35%);
+     background-size: 1000px 100%;
+}
+
+
+.box {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+
+     .shimmer {
+          padding: 5px;
+          width: 100%;
+          margin: 10px auto;
+          background: #ffffff;
+
+          .wrapper {
+               width: 0px;
+               animation: fullView 0.5s forwards linear;
+
+               .title {
+                    width: 50%;
+               }
+
+               .link {
+                    width: 70%;
+               }
+
+               .description {
+                    width: 90%;
+               }
+
+               .image-card {
+                    height: 10rem;
+                    width: 100%;
+                    // float: right;
+                    border-radius: 8px;
+               }
+
+               .stroke {
+                    height: 15px;
+                    margin-top: 20px;
+               }
+
+               .animate {
+                    @include animate(#44eb23, #68f34c, #68f34c);
+               }
+
+               .animate1 {
+                    @include animate(#eb4b23d8, #ec4016, #eb4b23d0);
+               }
+
+               .animate2 {
+                    @include animate(#e6e6e6, #cccccc, #e6e6e6);
+               }
+
+               .animate3 {
+                    @include animate(#ebe823, #dfdb11, #ebe823);
+               }
+          }
+     }
+
+}
+
+@keyframes fullView {
+     100% {
+          width: 100%;
+     }
+}
+
+
+@keyframes shimmer {
+     from {
+          background-position: -1000px 0;
+     }
+
+     to {
+          background-position: 1000px 0;
+     }
+}
