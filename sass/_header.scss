@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
 $icon:#606060;
 $border:#d3d3d3;
+$active_icon:#f80b0b;
+$active:#c0c0c094;
+$hover:#d3d3d380;
+
 * {
      margin: 0;
      padding: 0;
      box-sizing: border-box;
+     font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -11,7 +19,8 @@ header {
           display: flex;
           padding: 1.5vh 3vh;
           justify-content: space-between;
-border-bottom: 1px solid $border;
+          border-bottom: 1px solid $border;
+
           .manu_box {
                display: flex;
                justify-content: space-between;
@@ -88,7 +97,7 @@ border-bottom: 1px solid $border;
                li {
                     list-style: none;
                     padding: 0vh .4vh;
-                    
+
                     a {
                          position: relative;
                          text-decoration: none;
@@ -100,6 +109,7 @@ border-bottom: 1px solid $border;
                          padding: 8px;
                          border: 1px solid transparent;
                          font-size: 19px;
+
                          img {
                               width: 14.3px;
                               height: 13.3px;
@@ -122,11 +132,63 @@ border-bottom: 1px solid $border;
                          border-radius: 50%;
                          line-height: 13px;
                          padding: 2px;
-                         span{
+
+                         span {
                               color: #ffff;
                          }
                     }
                }
           }
      }
+}
+
+.nav_sidebar {
+     nav {
+          width: 250px;
+          ul {
+               hr{
+                    margin: 1.5vh auto;
+                    opacity: .5;
+                    background-color: $icon;
+               }
+               li {
+                    list-style: none;
+
+                    a {
+                         text-decoration: none;
+                         color: $icon;
+                         font-weight: 400;
+                         font-size: 15.3px;
+                         width: 100%;
+                         display: block;
+                         padding: .7vh;
+                         display: flex;
+                         padding: 1vh 2vh;
+                         &:hover{
+                              background-color: $hover;
+                         }
+                         .icon{
+                              font-size: 20px;
+                              .icon{
+                                   width: 3.5vh;
+                              }
+                         }
+                         .lk_name{
+                              margin: auto 2vh ;
+                         }
+                    }
+                    .active{
+                         background-color: $active;
+                         font-weight: 500;
+                        .icon{
+                             color: $active_icon;
+                        }
+                    }
+               }
+          }
+     }
+}
+
+#show{
+     display: none;
 }

@@ -38,7 +38,7 @@
       <div class="manu_box">
         <ul>
           <li><a href="#"><i class="fas fa-video"></i></a></li>
-          <li><a href="#"><img src="img/icon1.png" alt=""></a></li>
+          <li><a href="#"><i class="fas fa-th"></i></a></li>
           <li><a href="#"><i class="fas fa-bell"></i>
 
               <div id="notifaction"> <span>9+</span></div>
@@ -47,13 +47,138 @@
           <li><a href="#"><i class="fas fa-user"></i></a></li>
         </ul>
       </div>
-
-
-
     </div>
-
   </header>
 
+  <div class="nav_sidebar">
+    <nav>
+      <ul>
+        <li>
+          <a class='navLink active' href="#">
+            <div class="icon">
+              <i class="fas fa-home icon"></i>
+            </div>
+            <div class="lk_name">
+              Home
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class='navLink' href="#">
+            <div class="icon">
+              <i class="fas fa-compass icon "></i>
+            </div>
+            <div class="lk_name">
+              Explore
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class='navLink' href="#">
+            <div class="icon">
+              <i class="fab fa-youtube icon"></i>
+            </div>
+            <div class="lk_name">
+              Subscriptions
+            </div>
+          </a>
+        </li>
+        <hr>
+        <li>
+          <a class='navLink' href="#">
+            <div class="icon">
+              <i class="fas fa-copy icon"></i>
+            </div>
+            <div class="lk_name">
+              Library
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class='navLink' href="#">
+            <div class="icon">
+              <i class="fas fa-history icon"></i>
+            </div>
+            <div class="lk_name">
+              History
+            </div>
+          </a>
+        </li>
+        <li><a class='navLink' href="#">
+            <div class="icon">
+              <i class="far fa-play-circle icon"></i>
+            </div>
+            <div class="lk_name">
+              Your videos
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class='navLink' href="#">
+            <div class="icon">
+              <i class="fas fa-clock icon"></i>
+            </div>
+            <div class="lk_name">
+              Watch later
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class='navLink' href="#">
+            <div class="icon">
+              <i class="fas fa-thumbs-up icon"></i>
+            </div>
+            <div class="lk_name">
+              Liked videos
+            </div>
+          </a>
+        </li>
+        <div id="show">
+          <li>
+            <a class='navLink' href="#">
+              <div class="icon">
+                <i class="fas fa-tasks icon"></i>
+              </div>
+              <div class="lk_name">
+                Education
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class='navLink' href="#">
+              <div class="icon">
+                <i class="fas fa-tasks icon"></i>
+              </div>
+              <div class="lk_name">
+                Move
+              </div>
+            </a>
+          </li>
+          <li >
+            <a class='navLink' href="#">
+              <div class="icon">
+                <i class="fas fa-tasks icon"></i>
+              </div>
+              <div class="lk_name">
+                Song
+              </div>
+            </a>
+          </li>
+        </div>
+        <li id="show_more">
+          <a class=' ' href="#">
+            <div class="icon">
+              <i class="fas fa-chevron-down icon"></i>
+            </div>
+            <div class="lk_name">
+              Show more
+            </div>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
 
 
 
@@ -61,6 +186,31 @@
 
   <script src="js/script.js"></script>
   <script src="js/all.js"></script>
+  <script>
+    /*===== ACTIVE AND REMOVE MENU =====*/
+    const navLink = document.querySelectorAll('.navLink');
+
+    function linkAction() {
+      /*Active link*/
+      navLink.forEach(n => n.classList.remove('active'));
+      this.classList.add('active');
+
+    }
+    navLink.forEach(n => n.addEventListener('click', linkAction));
+
+
+    var show_more = document.getElementById('show_more')
+    show_more.addEventListener('click', showHide);
+
+    function showHide() {
+      var show = document.getElementById('show');
+      if ( show.style.display === 'block' ) {
+        show.style.display = 'none';
+      } else {
+        show.style.display = 'block';
+      }
+    }
+  </script>
 </body>
 
 </html>
