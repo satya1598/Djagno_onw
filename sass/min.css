@@ -34,7 +34,7 @@ header .top_manu .manu_box .manu_btn {
 
 header .top_manu .manu_box .manu_btn span {
   width: 2vh;
-  background-color: #606060;
+  background-color: #5c5b5b;
   height: 2px;
   display: block;
   margin: 3px auto;
@@ -46,6 +46,13 @@ header .top_manu .manu_box .logo {
 
 header .top_manu .manu_box .logo img {
   width: 10vh;
+}
+
+header .top_manu .manu_box .microphone {
+  margin: auto 2vh;
+  font-size: 19px;
+  color: #5c5b5b;
+  cursor: pointer;
 }
 
 header .top_manu .search {
@@ -78,7 +85,7 @@ header .top_manu .search form input {
 header .top_manu .search form .sub_btn {
   width: 5vh;
   line-height: 3px;
-  font-size: 18.6px;
+  font-size: 18px;
   margin: 0;
   border: none;
   cursor: pointer;
@@ -107,7 +114,7 @@ header .top_manu ul li {
 header .top_manu ul li a {
   position: relative;
   text-decoration: none;
-  color: #606060;
+  color: #5c5b5b;
   line-height: 5px;
   width: 35px;
   height: 35px;
@@ -123,8 +130,8 @@ header .top_manu ul li a img {
 }
 
 header .top_manu ul li a:active {
-  color: #606060;
-  border: 1px solid #606060;
+  color: #5c5b5b;
+  border: 1px solid #5c5b5b;
   background-color: rgba(104, 104, 104, 0.158);
 }
 
@@ -146,12 +153,17 @@ header .top_manu ul li #notifaction span {
 
 .nav_sidebar nav {
   width: 250px;
+  position: fixed;
+  overflow-x: hidden;
+  overflow: scroll;
+  height: 100%;
+  margin-bottom: 150px;
 }
 
 .nav_sidebar nav ul hr {
   margin: 1.5vh auto;
-  opacity: .5;
-  background-color: #606060;
+  opacity: .4;
+  background-color: #5c5b5b;
 }
 
 .nav_sidebar nav ul li {
@@ -160,7 +172,7 @@ header .top_manu ul li #notifaction span {
 
 .nav_sidebar nav ul li a {
   text-decoration: none;
-  color: #606060;
+  color: #5c5b5b;
   font-weight: 400;
   font-size: 15.3px;
   width: 100%;
@@ -181,11 +193,13 @@ header .top_manu ul li #notifaction span {
 }
 
 .nav_sidebar nav ul li a .icon .icon {
-  width: 3.5vh;
+  width: 2.5vh;
+  border-radius: 50%;
 }
 
 .nav_sidebar nav ul li a .lk_name {
   margin: auto 2vh;
+  color: #313131;
 }
 
 .nav_sidebar nav ul li .active {
@@ -197,7 +211,29 @@ header .top_manu ul li #notifaction span {
   color: #f80b0b;
 }
 
-#show {
+.nav_sidebar nav ul li p {
+  margin: 1vh 3vh;
+  font-size: 15.3px;
+  font-weight: 500;
+  color: #5c5b5b;
+}
+
+#show_save, #show_less_su, #show_less_sv {
   display: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+.nav_sidebar:hover ::-webkit-scrollbar-thumb {
+  background: #c0c0c094;
 }
 /*# sourceMappingURL=min.css.map */

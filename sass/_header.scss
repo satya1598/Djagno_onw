@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-$icon:#606060;
+$icon:#5c5b5b;
+$font_color:#313131;
 $border:#d3d3d3;
 $active_icon:#f80b0b;
 $active:#c0c0c094;
 $hover:#d3d3d380;
+$icon_size:19px;
+$font_size:15.3px;
+$font_weight:400;
+$active_font_weight:500;
 
 * {
      margin: 0;
@@ -45,6 +50,13 @@ header {
                          width: 10vh;
                     }
                }
+
+               .microphone {
+                    margin: auto 2vh;
+                    font-size: $icon_size;
+                    color: $icon;
+                    cursor: pointer;
+               }
           }
 
           .search {
@@ -76,7 +88,7 @@ header {
                     .sub_btn {
                          width: 5vh;
                          line-height: 3px;
-                         font-size: 18.6px;
+                         font-size: 18px;
                          margin: 0;
                          border: none;
                          cursor: pointer;
@@ -108,7 +120,7 @@ header {
                          border-radius: 50%;
                          padding: 8px;
                          border: 1px solid transparent;
-                         font-size: 19px;
+                         font-size: $icon_size;
 
                          img {
                               width: 14.3px;
@@ -145,50 +157,86 @@ header {
 .nav_sidebar {
      nav {
           width: 250px;
+          position: fixed;
+          overflow-x: hidden;
+          overflow: scroll;
+          height: 100%;
+          margin-bottom: 150px;
+
           ul {
-               hr{
+               hr {
                     margin: 1.5vh auto;
-                    opacity: .5;
+                    opacity: .4;
                     background-color: $icon;
                }
+
                li {
                     list-style: none;
 
                     a {
                          text-decoration: none;
                          color: $icon;
-                         font-weight: 400;
-                         font-size: 15.3px;
+                         font-weight: $font_weight;
+                         font-size: $font_size;
                          width: 100%;
                          display: block;
                          padding: .7vh;
                          display: flex;
                          padding: 1vh 2vh;
-                         &:hover{
+
+                         &:hover {
                               background-color: $hover;
                          }
-                         .icon{
+
+                         .icon {
                               font-size: 20px;
-                              .icon{
-                                   width: 3.5vh;
+
+                              .icon {
+                                   width: 2.5vh;
+                                   border-radius: 50%;
                               }
                          }
-                         .lk_name{
-                              margin: auto 2vh ;
+
+                         .lk_name {
+                              margin: auto 2vh;
+                              color: $font_color;
                          }
                     }
-                    .active{
+
+                    .active {
                          background-color: $active;
+                         font-weight: $active_font_weight;
+
+                         .icon {
+                              color: $active_icon;
+                         }
+                    }
+                    p{
+                         margin: 1vh 3vh;
+                         font-size: $font_size;
                          font-weight: 500;
-                        .icon{
-                             color: $active_icon;
-                        }
+                         color: $icon;
                     }
                }
           }
      }
 }
 
-#show{
+#show_save, #show_less_su ,#show_less_sv{
      display: none;
 }
+
+::-webkit-scrollbar {
+     width: 8px;
+   }
+   
+   /* Handle */
+   ::-webkit-scrollbar-thumb {
+     background: transparent; 
+     border-radius: 12px;
+   }
+   
+   /* Handle on hover */
+  .nav_sidebar:hover ::-webkit-scrollbar-thumb {
+     background: $active; 
+   }

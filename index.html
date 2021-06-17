@@ -14,11 +14,14 @@
   <header>
     <div class="top_manu">
       <div class="manu_box">
-        <div class="manu_btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox">
+          <div class="manu_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </label>
         <div class="logo">
           <a href="#">
             <img src="img/logo.png" alt="logo">
@@ -33,6 +36,7 @@
             <button type="submit" class="sub_btn" name="submit"><i class="fas fa-search"></i></button>
           </form>
         </div>
+        <i class="fas fa-microphone microphone "></i>
       </div>
 
       <div class="manu_box">
@@ -51,7 +55,7 @@
   </header>
 
   <div class="nav_sidebar">
-    <nav>
+    <nav id="nav">
       <ul>
         <li>
           <a class='navLink active' href="#">
@@ -133,14 +137,15 @@
             </div>
           </a>
         </li>
-        <div id="show">
+        <!-- save videos -->
+        <div id="show_save">
           <li>
             <a class='navLink' href="#">
               <div class="icon">
                 <i class="fas fa-tasks icon"></i>
               </div>
               <div class="lk_name">
-                Education
+                Django
               </div>
             </a>
           </li>
@@ -150,33 +155,234 @@
                 <i class="fas fa-tasks icon"></i>
               </div>
               <div class="lk_name">
-                Move
+                node.js
               </div>
             </a>
           </li>
-          <li >
+          <li>
             <a class='navLink' href="#">
               <div class="icon">
                 <i class="fas fa-tasks icon"></i>
               </div>
               <div class="lk_name">
-                Song
+                php
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class='navLink' href="#">
+              <div class="icon">
+                <i class="fas fa-tasks icon"></i>
+              </div>
+              <div class="lk_name">
+                JAVASCRIPT
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class='navLink' href="#">
+              <div class="icon">
+                <i class="fas fa-tasks icon"></i>
+              </div>
+              <div class="lk_name">
+                Python
               </div>
             </a>
           </li>
         </div>
-        <li id="show_more">
-          <a class=' ' href="#">
+        <li id="show_more_save">
+          <a href="#">
             <div class="icon">
-              <i class="fas fa-chevron-down icon"></i>
+              <i class="fas fa-chevron-down icon" id="show_icon_save"></i>
             </div>
             <div class="lk_name">
-              Show more
+              <div id="show_more_sv">Show more</div>
+              <div id="show_less_sv"> Show less</div>
+            </div>
+          </a>
+        </li>
+        <hr>
+        <!-- SUBSCRIPTIONS -->
+        <li>
+          <p>SUBSCRIPTIONS</p>
+        </li>
+        <li id="show_more_sub">
+          <a class='navLink' href="#">
+            <div class="icon">
+              <img class="icon" src="img/download (1).jpg" alt="">
+            </div>
+            <div class="lk_name">
+              <pre>Pentanik IT Solution</pre>
+
+            </div>
+          </a>
+        </li>
+        <li id="show_more_sub">
+          <a class='navLink' href="#">
+            <div class="icon">
+              <img class="icon" src="img/download (2).jpg" alt="">
+            </div>
+            <div class="lk_name">
+              <pre>Dadar i School</pre>
+            </div>
+          </a>
+        </li>
+        <li id="show_more_sub">
+          <a class='navLink' href="#">
+            <div class="icon">
+              <img class="icon" src="img/download (3).jpg" alt="">
+            </div>
+            <div class="lk_name">
+              <pre>Learn with Cyber 71</pre>
+
+            </div>
+          </a>
+        </li>
+        <li id="show_more_sub">
+          <a class='navLink' href="#">
+            <div class="icon">
+              <img class="icon" src="img/download (4).jpg" alt="">
+            </div>
+            <div class="lk_name">
+              <pre>ENGLISH- FINGLISH</pre>
+
+            </div>
+          </a>
+        </li>
+        <li id="show_more_sub">
+          <a class='navLink' href="#">
+            <div class="icon">
+              <img class="icon" src="img/download (5).jpg" alt="">
+            </div>
+            <div class="lk_name">
+              <pre>Easy Tutorials</pre>
+
+            </div>
+          </a>
+        </li>
+        <li id="show_more_sub">
+          <a class='navLink' href="#">
+            <div class="icon">
+              <img class="icon" src="img/download (6).jpg" alt="">
+            </div>
+            <div class="lk_name">
+              <pre>Coder's Gyan</pre>
+
+            </div>
+          </a>
+        </li>
+        <li id="show_more_sub">
+          <a class='navLink' href="#">
+            <div class="icon">
+              <img class="icon" src="img/download (7).jpg" alt="">
+            </div>
+            <div class="lk_name">
+              <pre> Tech Rifle</pre>
+
+            </div>
+          </a>
+        </li>
+        <li id="show_more_sub">
+          <a class='navLink' href="#">
+            <div class="icon">
+              <img class="icon" src="img/download (8).jpg" alt="">
+            </div>
+            <div class="lk_name">
+              <pre> Rabbil Hasan</pre>
+
+            </div>
+          </a>
+        </li>
+        <li id="show_more_sub">
+          <a class='navLink' href="#">
+            <div class="icon">
+              <img class="icon" src="img/download (9).jpg" alt="">
+            </div>
+            <div class="lk_name">
+              <pre> Programming Hero</pre>
+            </div>
+          </a>
+        </li>
+        <li id="show_more_sub">
+          <a class='navLink' href="#">
+            <div class="icon">
+              <img class="icon" src="img/download (10).jpg" alt="">
+            </div>
+            <div class="lk_name">
+              <pre>Jhankar Mahbub</pre>
+
+            </div>
+          </a>
+        </li>
+        <li id="show_more_sub">
+          <a class='navLink' href="#">
+            <div class="icon">
+              <i class="fas fa-plus-circle icon"></i>
+            </div>
+            <div class="lk_name">
+              <pre>Browse channels</pre>
+
+            </div>
+          </a>
+        </li>
+        <li id="show_more_btn">
+          <a href="#">
+            <div class="icon">
+              <i class="fas fa-chevron-down icon" id="show_more_sub_icon"></i>
+            </div>
+            <div class="lk_name">
+               <span id="show_more_su"> </span> 
+               <span id="show_less_su"> Show less</span> 
             </div>
           </a>
         </li>
 
+        <!-- more_form_youtube -->
+        <li>
+          <p>MORE FROM YOUTUBE</p>
+        </li>
+
+        <li>
+          <a class='navLink' href="#">
+            <div class="icon">
+              <i class="fas fa-gamepad icon"></i>
+            </div>
+            <div class="lk_name">
+              Gaming
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class='navLink' href="#">
+            <div class="icon">
+              <i class="fas fa-wifi icon"></i>
+            </div>
+            <div class="lk_name">
+              Live
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class='navLink' href="#">
+            <div class="icon">
+              <i class="fas fa-trophy icon"></i>
+            </div>
+            <div class="lk_name">
+              Sport
+            </div>
+          </a>
+        </li>
+        <li>
+          <p>
+            AboutPressCopyrightContact usCreatorsAdvertiseDevelopers
+            TermsPrivacyPolicy & SafetyHow YouTube worksTest new features
+          </p>
+        </li>
+        <li>© 2021 Google LLC</li>
       </ul>
+      <br>
+      <br>
+      <br>
     </nav>
   </div>
 
@@ -184,32 +390,10 @@
 
 
 
-  <script src="js/script.js"></script>
   <script src="js/all.js"></script>
-  <script>
-    /*===== ACTIVE AND REMOVE MENU =====*/
-    const navLink = document.querySelectorAll('.navLink');
+  <script src="js/script.js"></script>
+  <script> 
 
-    function linkAction() {
-      /*Active link*/
-      navLink.forEach(n => n.classList.remove('active'));
-      this.classList.add('active');
-
-    }
-    navLink.forEach(n => n.addEventListener('click', linkAction));
-
-
-    var show_more = document.getElementById('show_more')
-    show_more.addEventListener('click', showHide);
-
-    function showHide() {
-      var show = document.getElementById('show');
-      if ( show.style.display === 'block' ) {
-        show.style.display = 'none';
-      } else {
-        show.style.display = 'block';
-      }
-    }
   </script>
 </body>
 
