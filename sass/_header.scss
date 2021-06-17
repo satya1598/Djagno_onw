@@ -12,6 +12,11 @@ $font_size:15.3px;
 $font_weight:400;
 $active_font_weight:500;
 
+@mixin hr {
+     opacity: .4;
+     background-color: $icon;
+}
+
 * {
      margin: 0;
      padding: 0;
@@ -109,6 +114,79 @@ header {
                li {
                     list-style: none;
                     padding: 0vh .4vh;
+                    position: relative;
+
+                    #dropdown_item {
+                         position: absolute;
+                         top: 120%;
+                         right: 30%;
+                         width: 230px;
+                         border: 1px solid $hover;
+
+                         ul {
+                              display: flex;
+                              flex-direction: column;
+                              background-color: #fff;
+
+                              hr {
+                                   @include hr;
+                              }
+
+                              li {
+                                   list-style: none;
+                                   padding: 0;
+                                   margin: .6vh 0vh;
+
+                                   a {
+                                        text-decoration: none;
+                                        color: $active_icon;
+                                        font-weight: $font_weight;
+                                        font-size: 14px;
+                                        width: 100%;
+                                        display: block;
+                                        padding: .7vh;
+                                        display: flex;
+                                        padding: 1vh 2vh;
+                                        border-radius: 0%;
+                                        border: none;
+
+                                        &:hover {
+                                             background-color: $hover;
+                                        }
+
+                                        .icon {
+                                             font-size: 20px;
+
+                                             .icon {
+                                                  width: 2.5vh;
+                                                  border-radius: 50%;
+                                             }
+                                        }
+
+                                        .lk_name {
+                                             margin: auto 2vh;
+                                             color: $font_color;
+                                        }
+                                   }
+
+                                   .active {
+                                        background-color: $active;
+                                        font-weight: $active_font_weight;
+
+                                        .icon {
+                                             color: $active_icon;
+                                        }
+                                   }
+
+                                   p {
+                                        margin: 1vh 3vh;
+                                        font-size: $font_size;
+                                        font-weight: 500;
+                                        color: $icon;
+                                   }
+                              }
+                         }
+                    }
 
                     a {
                          position: relative;
@@ -121,6 +199,7 @@ header {
                          padding: 8px;
                          border: 1px solid transparent;
                          font-size: $icon_size;
+
 
                          img {
                               width: 14.3px;
@@ -164,10 +243,10 @@ header {
           margin-bottom: 150px;
 
           ul {
+
                hr {
-                    margin: 1.5vh auto;
-                    opacity: .4;
-                    background-color: $icon;
+                    @include hr;
+                    margin: 1.6vh auto;
                }
 
                li {
@@ -211,7 +290,8 @@ header {
                               color: $active_icon;
                          }
                     }
-                    p{
+
+                    p {
                          margin: 1vh 3vh;
                          font-size: $font_size;
                          font-weight: 500;
@@ -221,22 +301,25 @@ header {
           }
      }
 }
-
-#show_save, #show_less_su ,#show_less_sv{
+#dropdown_item,
+#show_save,
+#show_less_su,
+#show_less_sv {
      display: none;
 }
 
 ::-webkit-scrollbar {
      width: 8px;
-   }
-   
-   /* Handle */
-   ::-webkit-scrollbar-thumb {
-     background: transparent; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+     background: transparent;
      border-radius: 12px;
-   }
-   
-   /* Handle on hover */
-  .nav_sidebar:hover ::-webkit-scrollbar-thumb {
-     background: $active; 
-   }
+}
+
+/* Handle on hover */
+.nav_sidebar:hover ::-webkit-scrollbar-thumb {
+     background: $active;
+}
+

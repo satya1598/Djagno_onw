@@ -10,12 +10,29 @@
     navLink.forEach(n => n.addEventListener('click', linkAction));
 
 
+
+    //     Dropdown Active and Remove 
+
+    var dropdown_btn = document.getElementById('dropdown_btn').addEventListener('click', dropDown);
+    function dropDown() {
+         var dropdown_item = document.getElementById('dropdown_item');
+         if (dropdown_item.style.display === 'block') {
+              dropdown_item.style.display = 'none';
+         } else {
+              dropdown_item.style.display = 'block';
+         }
+    }
+
+
+
+
     // show save videos
 
     var show_more = document.getElementById('show_more_save')
     show_more.addEventListener('click', showHide);
     var show_more_sv = document.getElementById('show_more_sv')
     var show_less_sv = document.getElementById('show_less_sv')
+
     function showHide() {
          var show = document.getElementById('show_save');
          var show_icon = document.getElementById('show_icon_save');

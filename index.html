@@ -14,14 +14,11 @@
   <header>
     <div class="top_manu">
       <div class="manu_box">
-        <input type="checkbox" id="checkbox">
-        <label for="checkbox">
-          <div class="manu_btn">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </label>
+        <div class="manu_btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div class="logo">
           <a href="#">
             <img src="img/logo.png" alt="logo">
@@ -42,9 +39,69 @@
       <div class="manu_box">
         <ul>
           <li><a href="#"><i class="fas fa-video"></i></a></li>
-          <li><a href="#"><i class="fas fa-th"></i></a></li>
-          <li><a href="#"><i class="fas fa-bell"></i>
-
+          <li id="dropdown_btn">
+            <a href="#">
+              <i class="fas fa-th"></i>
+            </a>
+            <nav id="dropdown_item">
+              <ul>
+                <li>
+                  <a class='navLink' href="#">
+                    <div class="icon">
+                      <i class="fab fa-youtube icon"></i>
+                    </div>
+                    <div class="lk_name">
+                      Yout TV
+                    </div>
+                  </a>
+                </li>
+                <hr>
+                <li>
+                  <a class='navLink' href="#">
+                    <div class="icon">
+                      <i class="fab fa-youtube icon"></i>
+                    </div>
+                    <div class="lk_name">
+                      YouTube Music
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class='navLink' href="#">
+                    <div class="icon">
+                      <i class="fab fa-youtube icon"></i>
+                    </div>
+                    <div class="lk_name">
+                      YouTube Kids
+                    </div>
+                  </a>
+                </li>
+                <hr>
+                <li>
+                  <a class='navLink' href="#">
+                    <div class="icon">
+                      <i class="fab fa-youtube icon"></i>
+                    </div>
+                    <div class="lk_name">
+                      Creator Academy
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class='navLink' href="#">
+                    <div class="icon">
+                      <i class="fab fa-youtube icon"></i>
+                    </div>
+                    <div class="lk_name">
+                    YouTube for Artists
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-bell"></i>
               <div id="notifaction"> <span>9+</span></div>
             </a>
           </li>
@@ -331,8 +388,8 @@
               <i class="fas fa-chevron-down icon" id="show_more_sub_icon"></i>
             </div>
             <div class="lk_name">
-               <span id="show_more_su"> </span> 
-               <span id="show_less_su"> Show less</span> 
+              <span id="show_more_su"> </span>
+              <span id="show_less_su"> Show less</span>
             </div>
           </a>
         </li>
@@ -421,7 +478,7 @@
             TermsPrivacyPolicy & SafetyHow YouTube worksTest new features
           </p>
         </li>
-        <li style="margin: 2vh 2.3vh; font-size: 14px; opacity: .5;" >© 2021 Google LLC</li>
+        <li style="margin: 2vh 2.3vh; font-size: 14px; opacity: .5;">© 2021 Google LLC</li>
       </ul>
       <br>
       <br>
@@ -435,7 +492,7 @@
 
   <script src="js/all.js"></script>
   <script src="js/script.js"></script>
-  <script> 
+  <script>
 
   </script>
 </body>

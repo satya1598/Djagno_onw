@@ -109,6 +109,87 @@ header .top_manu ul {
 header .top_manu ul li {
   list-style: none;
   padding: 0vh .4vh;
+  position: relative;
+}
+
+header .top_manu ul li #dropdown_item {
+  position: absolute;
+  top: 120%;
+  right: 30%;
+  width: 230px;
+  border: 1px solid #d3d3d380;
+}
+
+header .top_manu ul li #dropdown_item ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+}
+
+header .top_manu ul li #dropdown_item ul hr {
+  opacity: .4;
+  background-color: #5c5b5b;
+}
+
+header .top_manu ul li #dropdown_item ul li {
+  list-style: none;
+  padding: 0;
+  margin: .6vh 0vh;
+}
+
+header .top_manu ul li #dropdown_item ul li a {
+  text-decoration: none;
+  color: #f80b0b;
+  font-weight: 400;
+  font-size: 14px;
+  width: 100%;
+  display: block;
+  padding: .7vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1vh 2vh;
+  border-radius: 0%;
+  border: none;
+}
+
+header .top_manu ul li #dropdown_item ul li a:hover {
+  background-color: #d3d3d380;
+}
+
+header .top_manu ul li #dropdown_item ul li a .icon {
+  font-size: 20px;
+}
+
+header .top_manu ul li #dropdown_item ul li a .icon .icon {
+  width: 2.5vh;
+  border-radius: 50%;
+}
+
+header .top_manu ul li #dropdown_item ul li a .lk_name {
+  margin: auto 2vh;
+  color: #313131;
+}
+
+header .top_manu ul li #dropdown_item ul li .active {
+  background-color: #c0c0c094;
+  font-weight: 500;
+}
+
+header .top_manu ul li #dropdown_item ul li .active .icon {
+  color: #f80b0b;
+}
+
+header .top_manu ul li #dropdown_item ul li p {
+  margin: 1vh 3vh;
+  font-size: 15.3px;
+  font-weight: 500;
+  color: #5c5b5b;
 }
 
 header .top_manu ul li a {
@@ -161,9 +242,9 @@ header .top_manu ul li #notifaction span {
 }
 
 .nav_sidebar nav ul hr {
-  margin: 1.5vh auto;
   opacity: .4;
   background-color: #5c5b5b;
+  margin: 1.6vh auto;
 }
 
 .nav_sidebar nav ul li {
@@ -218,7 +299,10 @@ header .top_manu ul li #notifaction span {
   color: #5c5b5b;
 }
 
-#show_save, #show_less_su, #show_less_sv {
+#dropdown_item,
+#show_save,
+#show_less_su,
+#show_less_sv {
   display: none;
 }
 
