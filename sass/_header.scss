@@ -156,6 +156,7 @@ header {
 
                                         .icon {
                                              font-size: 20px;
+          
 
                                              .icon {
                                                   width: 2.5vh;
@@ -269,7 +270,11 @@ header {
 
                          .icon {
                               font-size: 20px;
-
+                              #span{
+                                   font-size: 10px;
+                                   display: none;
+                                   font-weight: 400;
+                              }
                               .icon {
                                    width: 2.5vh;
                                    border-radius: 50%;

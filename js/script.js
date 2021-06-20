@@ -98,6 +98,7 @@
     function manuBtnfun() {
          let listAll = document.getElementById('nav').querySelectorAll('li');
          let a_padding = document.getElementById('nav').querySelectorAll('a');
+         let span = document.getElementById('nav').querySelectorAll('#span');
          let hr = document.getElementById('nav').querySelectorAll('hr');
          let nav_width = document.getElementById('nav');
          var show_more_sub1 = document.querySelectorAll('#show_more_sub');
@@ -114,6 +115,9 @@
                    for (var iii = 0; iii < 5 ; iii++) {
                     a_padding[iii].style.padding = '1vh 2vh';
                    }
+                   for (var iiii = 0; iiii < span.length ; iiii++) {
+                    span[iiii].style.display = 'none';
+                   }
               } else {
                    listAll[i].style.display = 'none';
                    nav_width.style.width = '70px';
@@ -124,7 +128,10 @@
                         show_more_sub1[ii].style.display = 'none';
                    }
                    for (var iii = 0; iii < 5 ; iii++) {
-                    a_padding[iii].style.padding = '2vh 2vh';
+                    a_padding[iii].style.padding = '1vh 2vh';
+                   }
+                   for (var iiii = 0; iiii < span.length ; iiii++) {
+                    span[iiii].style.display = 'block';
                    }
               }
          }

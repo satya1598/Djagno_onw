@@ -273,6 +273,12 @@ header .top_manu ul li #notifaction span {
   font-size: 20px;
 }
 
+.nav_sidebar nav ul li a .icon #span {
+  font-size: 10px;
+  display: none;
+  font-weight: 400;
+}
+
 .nav_sidebar nav ul li a .icon .icon {
   width: 2.5vh;
   border-radius: 50%;
