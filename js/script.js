@@ -14,6 +14,7 @@
     //     Dropdown Active and Remove 
 
     var dropdown_btn = document.getElementById('dropdown_btn').addEventListener('click', dropDown);
+
     function dropDown() {
          var dropdown_item = document.getElementById('dropdown_item');
          if (dropdown_item.style.display === 'block') {
@@ -81,4 +82,36 @@
          var number = document.getElementById('show_more_su');
          var num = show_more_sub.length.toString();
          number.innerHTML = 'Show ' + num + ' more';
+    }
+
+
+
+
+
+
+
+
+    //    manu responsive 
+
+    let manuBtn = document.getElementById('manu_btn').addEventListener('click', manuBtnfun);
+
+    function manuBtnfun() {
+         let listAll = document.getElementById('nav').querySelectorAll('li');
+         let hr = document.getElementById('nav').querySelectorAll('hr');
+         let nav_width = document.getElementById('nav');
+         for (var i = 4; i < listAll.length; i++) {
+              if (listAll[i].style.display === 'block') {
+                   listAll[i].style.display = 'none';
+                   nav_width.style.width = '70px';
+                   for (var x = 0; x < hr.length; x++) {
+                        hr[x].style.display = 'none';
+                   }
+              } else {
+                   listAll[i].style.display = 'block';
+                   nav_width.style.width = '250px';
+                   for (var x = 0; x < hr.length; x++) {
+                        hr[x].style.display = 'block';
+                   }
+              }
+         }
     }
