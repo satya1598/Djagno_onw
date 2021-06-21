@@ -25,6 +25,11 @@ $active_font_weight:500;
 }
 
 header {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     background-color: #ffff;
      .top_manu {
           display: flex;
           padding: 1.5vh 3vh;
@@ -327,4 +332,6 @@ header {
 .nav_sidebar:hover ::-webkit-scrollbar-thumb {
      background: $active;
 }
+
+
 

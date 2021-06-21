@@ -7,6 +7,14 @@
   font-family: 'Roboto', sans-serif;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffff;
+}
+
 header .top_manu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -325,5 +333,193 @@ header .top_manu ul li #notifaction span {
 /* Handle on hover */
 .nav_sidebar:hover ::-webkit-scrollbar-thumb {
   background: #c0c0c094;
+}
+
+/* 
+
+    <div class="box" id="box">
+      <div class="shimmer">
+        <div class="wrapper">
+          <div class="image-card animate"></div>
+          <div class="stroke animate title"></div>
+          <div class="stroke animate link"></div>
+          <div class="stroke animate description"></div>
+        </div>
+      </div>
+      <div class="shimmer">
+        <div class="wrapper">
+          <div class="image-card animate1"></div>
+          <div class="stroke animate1 title"></div>
+          <div class="stroke animate link"></div>
+          <div class="stroke animate3 description"></div>
+          <div class="stroke animate2 description"></div>
+        </div>
+      </div>
+      <div class="shimmer">
+        <div class="wrapper">
+          <div class="image-card animate3"></div>
+          <div class="stroke animate3 title"></div>
+          <div class="stroke animate3 link"></div>
+          <div class="stroke animate3 description"></div>
+        </div>
+      </div>
+    </div>
+
+*/
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 250px;
+  margin-top: 10vh;
+}
+
+.box .shimmer {
+  padding: 2vh;
+  width: 100%;
+  margin: 10px auto;
+  background: #ffffff;
+  -webkit-box-flex: 25%;
+      -ms-flex: 25%;
+          flex: 25%;
+}
+
+.box .shimmer .wrapper {
+  width: 0px;
+  -webkit-animation: fullView 0.5s forwards linear;
+          animation: fullView 0.5s forwards linear;
+}
+
+.box .shimmer .wrapper .title {
+  width: 50%;
+}
+
+.box .shimmer .wrapper .link {
+  width: 70%;
+}
+
+.box .shimmer .wrapper .description {
+  width: 90%;
+}
+
+.box .shimmer .wrapper .image-card {
+  height: 13rem;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.box .shimmer .wrapper .stroke {
+  height: 15px;
+  margin-top: 20px;
+}
+
+.box .shimmer .wrapper .animate {
+  -webkit-animation: shimmer 3s;
+          animation: shimmer 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #e6e6e6), color-stop(25%, #cccccc), color-stop(35%, #e6e6e6));
+  background: linear-gradient(to right, #e6e6e6 5%, #cccccc 25%, #e6e6e6 35%);
+  background: linear-gradient(to right, #e6e6e6 5%, #cccccc 25%, #e6e6e6 35%);
+  background-size: 1000px 100%;
+}
+
+.box .shimmer .wrapper .animate1 {
+  -webkit-animation: shimmer 3s;
+          animation: shimmer 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #e6e6e6), color-stop(25%, #cccccc), color-stop(35%, #e6e6e6));
+  background: linear-gradient(to right, #e6e6e6 5%, #cccccc 25%, #e6e6e6 35%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #eb4b23d8), color-stop(25%, #ec4016), color-stop(35%, #eb4b23d0));
+  background: linear-gradient(to right, #eb4b23d8 5%, #ec4016 25%, #eb4b23d0 35%);
+  background-size: 1000px 100%;
+}
+
+.box .shimmer .wrapper .animate2 {
+  -webkit-animation: shimmer 3s;
+          animation: shimmer 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #e6e6e6), color-stop(25%, #cccccc), color-stop(35%, #e6e6e6));
+  background: linear-gradient(to right, #e6e6e6 5%, #cccccc 25%, #e6e6e6 35%);
+  background: linear-gradient(to right, #e6e6e6 5%, #cccccc 25%, #e6e6e6 35%);
+  background-size: 1000px 100%;
+}
+
+.box .shimmer .wrapper .animate3 {
+  -webkit-animation: shimmer 3s;
+          animation: shimmer 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #e6e6e6), color-stop(25%, #cccccc), color-stop(35%, #e6e6e6));
+  background: linear-gradient(to right, #e6e6e6 5%, #cccccc 25%, #e6e6e6 35%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #ebe823), color-stop(25%, #dfdb11), color-stop(35%, #ebe823));
+  background: linear-gradient(to right, #ebe823 5%, #dfdb11 25%, #ebe823 35%);
+  background-size: 1000px 100%;
+}
+
+@-webkit-keyframes fullView {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fullView {
+  100% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes shimmer {
+  from {
+    background-position: -1000px 0;
+  }
+  to {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: -1000px 0;
+  }
+  to {
+    background-position: 1000px 0;
+  }
+}
+
+.videos {
+  margin-left: 250px;
+  margin-top: 60px;
+}
+
+.videos .video_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  padding: 5vh;
+  padding-top: 0;
+}
+
+.videos .video_box #video_single_box {
+  height: 225px;
+  background-color: #c0bcbc;
+  margin: 1vh;
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
 }
 /*# sourceMappingURL=min.css.map */

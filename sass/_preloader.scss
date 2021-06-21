@@ -51,12 +51,16 @@
      display: flex;
      flex-direction: row;
      justify-content: center;
+     flex-wrap: wrap;
+     padding-left: 250px;
+     margin-top:10vh;
 
      .shimmer {
-          padding: 5px;
+          padding:2vh;
           width: 100%;
           margin: 10px auto;
           background: #ffffff;
+          flex: 25%;
 
           .wrapper {
                width: 0px;
@@ -75,7 +79,7 @@
                }
 
                .image-card {
-                    height: 10rem;
+                    height: 13rem;
                     width: 100%;
                     // float: right;
                     border-radius: 8px;
@@ -87,7 +91,7 @@
                }
 
                .animate {
-                    @include animate(#44eb23, #68f34c, #68f34c);
+                    @include animate( #e6e6e6 , #cccccc , #e6e6e6);
                }
 
                .animate1 {
@@ -122,3 +126,6 @@
           background-position: 1000px 0;
      }
 }
+
+
+
