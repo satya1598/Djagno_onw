@@ -335,37 +335,7 @@ header .top_manu ul li #notifaction span {
   background: #c0c0c094;
 }
 
-/* 
 
-    <div class="box" id="box">
-      <div class="shimmer">
-        <div class="wrapper">
-          <div class="image-card animate"></div>
-          <div class="stroke animate title"></div>
-          <div class="stroke animate link"></div>
-          <div class="stroke animate description"></div>
-        </div>
-      </div>
-      <div class="shimmer">
-        <div class="wrapper">
-          <div class="image-card animate1"></div>
-          <div class="stroke animate1 title"></div>
-          <div class="stroke animate link"></div>
-          <div class="stroke animate3 description"></div>
-          <div class="stroke animate2 description"></div>
-        </div>
-      </div>
-      <div class="shimmer">
-        <div class="wrapper">
-          <div class="image-card animate3"></div>
-          <div class="stroke animate3 title"></div>
-          <div class="stroke animate3 link"></div>
-          <div class="stroke animate3 description"></div>
-        </div>
-      </div>
-    </div>
-
-*/
 .box {
   display: -webkit-box;
   display: -ms-flexbox;

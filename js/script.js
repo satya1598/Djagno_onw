@@ -3,6 +3,8 @@
   
   function preLoder() {
         var preloder = document.getElementById('preloder');
+        let videos = document.getElementById('videos');
+        videos.style.display = 'block';
         preloder.style.display = 'none';
    }
 
